@@ -14,11 +14,24 @@ buildscript {
     }
 }
 
+
 allprojects {
     repositories {
+
         google()
         jcenter()
     }
+}
+
+/**
+ * Project-wide compile / dependency version vars for use by app and all other 3rd party libs.
+ */
+ext {
+    compileSdkVersion   = 26
+    targetSdkVersion    = 26
+    buildToolsVersion   = "26.0.2"
+    supportLibVersion   = "26.1.0"
+    googlePlayServicesVersion = "11.8.0"
 }
 
 task clean(type: Delete) {
